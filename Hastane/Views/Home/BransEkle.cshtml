@@ -1,0 +1,14 @@
+﻿@model Branslar 
+@{
+    ViewData["Title"] = "BransEkle";
+}
+
+<h1>BransEkle</h1>
+
+ <form asp-action="BransEkle" asp-controller="Home" method="post">
+    <div class="mb-3">
+        <label asp-for="BransAd" class="form-label">Branş Adı</label>
+        <input class="form-control" asp-for="BransAd">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

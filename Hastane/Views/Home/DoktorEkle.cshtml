@@ -1,0 +1,19 @@
+﻿@model Doktorlar
+@{
+    ViewData["Title"] = "DoktorEkle";
+}
+
+<h1>DoktorEkle</h1>
+
+<form asp-action="DoktorEkle" asp-controller="Home" method="post">
+    <div class="mb-3">
+        <label asp-for="DoktorAdSoyad" class="form-label">Doktor Adı Soyadı</label>
+        <input class="form-control" asp-for="DoktorAdSoyad">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="BransId" class="form-label">Branş Adı</label>
+        <select class="form-control" asp-items="@ViewBag.branslars" asp-for="BransId"></select>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
